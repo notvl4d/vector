@@ -1,0 +1,12 @@
+.topbar{
+    width: auto;
+    height: 50px;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: blue;
+    padding-left: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+    filter: blur(2px);
+}

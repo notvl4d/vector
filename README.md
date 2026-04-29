@@ -6,4 +6,4 @@
 
 Poze
 ![](photos/img1.png)
-![alt text](photos/img1.png)
+![alt text](photos/img2.png)

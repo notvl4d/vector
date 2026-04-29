@@ -4,6 +4,11 @@
   justify-content: center;
   height: 10vh;
 }
+.centered-simple{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 .title{
   font-size: 4rem;
   color: #ffffff;
@@ -49,11 +54,12 @@
   background-color: #232224;
   border: none;
   border-radius: 0.5em;
-  color: #0e0e0e;
+  color: #ffffff;
   height: 6vh;
   width: 20vw;
   font-size: 20px;
   resize: none;
+  
 }
 .dynamic-container{
   height: 8vh;
@@ -109,7 +115,10 @@
   width: 5vh;
   height: 5vh;
 }
-
+.graf{
+  background-color: #232224;
+  border-radius: 10px;
+}
 html, body{
   min-height: 100vh;
   margin: 0;

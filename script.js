@@ -5,9 +5,6 @@ let output = document.getElementById("output");
 
 let noduri,muchii,cost,x,y,nodStart,nrInterese,costSolutie=0,costMinim,lungimeSolutie;
 let costuri=[],interese=[],vizitat=[],solutie=[];
-
-
-
 function citire(){
     [noduri, muchii] = inputNrMuchii.value.trim().split(/\s+/).map(Number);
     for(let i=0;i<=noduri+3;i++){
@@ -78,9 +75,55 @@ function Back(k)
 	}
 
 }
+function creereGraf(){
 
+    const cy = cytoscape({
+      container: document.getElementById('graf'),
+
+      elements: [
+      ],
+
+      style: [
+        {
+          selector: 'node',
+          style: {
+            'label': 'data(id)',
+            'background-color': '#4a90e2',
+            'color': '#fff',
+            'text-valign': 'center',
+            'text-halign': 'center',
+            'width': 40,
+            'height': 40,
+            'font-size': 14
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'width': 2,
+            'line-color': '#888'
+          }
+        }
+      ],
+    });
+    cy.container().style.width = '80vw';
+    cy.container().style.height = '100vh';
+    for(let i=1;i<=noduri;i++){
+        cy.add({ data: { id: i.toString() } });
+    }
+    for(let i=1;i<=noduri;i++){
+        for(let j=i+1;j<=noduri;j++){
+            if(costuri[i][j]){
+                cy.add({ data: { id: i.toString() + '-' + j.toString(), source: i.toString(), target: j.toString() } });
+            }
+        }
+    }
+    cy.layout({ name: 'cose', animate: true }).run();
+}
 function calculate(){
+    output.innerHTML="";
     citire();
+    creereGraf();
     vizitat[1] = nodStart;
     Back(2);
     for(let i=1;i<=lungimeSolutie;i++){
@@ -88,4 +131,5 @@ function calculate(){
     }
     output.innerHTML+=nodStart;
 }
+
 

@@ -3,3 +3,7 @@
 ---
 
 [Pagina web ](https://notvl4d.github.io/vector/)
+
+Poze
+![](photos/img1.png)
+![alt text](photos/img1.png)

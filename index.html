@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="topbar"> 
-	Vector
+    <div class="centered">
+        <div class="topbar"> 
+	        <b>Vector</b>
+        </div>
     </div>
-    <h1>test</h1>
+
+    <div class="container">
+        <div class="container">
+            <textarea class="date" placeholder="nr. muchii" id="inputNrMuchii"></textarea>
+            <textarea class="date" placeholder="x/y/cost" id="inputMuchii"></textarea>
+            <textarea class="date" placeholder="nodstart/nrinterese interese" id="inputInterese"></textarea>
+            <button class="button" onclick="calculate()">Calculeaza</button>
+        </div>
+        
+        
+        <textarea class="box" placeholder="Date de iesire" readonly id="output"></textarea>
+    </div>
 </body>
 </html>

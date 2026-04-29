@@ -6,25 +6,43 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Acasă</title>
 </head>
 <body>
-    <div class="centered">
-        <div class="topbar"> 
-	        <b>Vector</b>
-        </div>
-    </div>
+    <header>
+        <div class="centered">
+            <div class="topbar"> 
+                <div class="title">VECTOR</div>
+                <div class="other-pages">
+                    <a href="index.html">Acasă</a> 
+                    <a href="index.html">pag1</a>
+                    <a href="documentatie.html">Documentație</a>
+                </div>
 
-    <div class="container">
-        <div class="container">
-            <textarea class="date" placeholder="nr. muchii" id="inputNrMuchii"></textarea>
-            <textarea class="date" placeholder="x/y/cost" id="inputMuchii"></textarea>
-            <textarea class="date" placeholder="nodstart/nrinterese interese" id="inputInterese"></textarea>
-            <button class="button" onclick="calculate()">Calculeaza</button>
+            </div>
         </div>
-        
-        
-        <textarea class="box" placeholder="Date de iesire" readonly id="output"></textarea>
-    </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="dynamic-container">
+                <textarea class="date" placeholder="nr. muchii" id="inputNrMuchii"></textarea>
+                <textarea class="date" placeholder="x/y/cost" id="inputMuchii"></textarea>
+                <textarea class="date" placeholder="nodstart/nrinterese interese" id="inputInterese"></textarea>
+                <button class="calculate-button" onclick="calculate()">Calculeaza</button>
+            </div>
+            <textarea class="box" placeholder="Date de iesire" readonly id="output"></textarea>
+            
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">În curs de dezvoltare</div>
+            <div class="footer-links">
+                <a href="https://github.com/notvl4d/vector"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

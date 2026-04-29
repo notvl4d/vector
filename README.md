@@ -5,5 +5,9 @@
 [Pagina web ](https://notvl4d.github.io/vector/)
 
 Poze
-![](photos/img1.png)
-![alt text](photos/img2.png)
+![img1](photos/img1.png)
+![img2](photos/img2.png)
+![img3](photos/img3.png)
+![img4](photos/img4.png)
+![img5](photos/img5.png)
+![img6](photos/img6.png)

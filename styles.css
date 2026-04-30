@@ -78,6 +78,16 @@
   font-size: 1rem;
   cursor: pointer;
 }
+.example-button{
+  background-color: #283592;
+  border: none;
+  border-radius: 0.5em;
+  color: #E6E1E3;
+  height: 5vh;
+  width: 20vw;
+  font-size: 1rem;
+  cursor: pointer;
+}
 .documentation{
   position: relative;
   display: flex;

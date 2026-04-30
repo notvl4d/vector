@@ -1,5 +1,5 @@
 let inputNrMuchii = document.getElementById("inputNrMuchii");
-let inputMuchii = document.getElementById("inputMuchii");
+let inputMuchii = document.getElementById("inputMuchii");  
 let inputInterese =document.getElementById("inputInterese");
 let output = document.getElementById("output");
 
@@ -97,6 +97,12 @@ function creereGraf(){
             'font-size': 14
           }
         },
+  	{
+    	  selector: '.rosu',
+          style: {
+      	    'background-color': 'red'
+    	  }
+ 	},
         {
           selector: 'edge',
           style: {
@@ -118,7 +124,9 @@ function creereGraf(){
             }
         }
     }
+
     cy.layout({ name: 'cose', animate: true }).run();
+    cy.getElementById('1').addClass('rosu');
 }
 function calculate(){
     output.innerHTML="";
@@ -130,6 +138,13 @@ function calculate(){
         output.innerHTML+=solutie[i]+"->";
     }
     output.innerHTML+=nodStart;
+}
+function example(){
+    inputNrMuchii.innerHTML="4 6";
+    inputMuchii.innerHTML="1 2 10\n1 3 15\n1 4 20\n2 3 35\n2 4 25\n3 4 30";
+    inputInterese.innerHTML="3 1 2 3 4";
+    
+
 }
 
 

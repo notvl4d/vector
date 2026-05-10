@@ -19,7 +19,7 @@
                 <div class="title">VECTOR</div>
                 <div class="other-pages">
                     <a href="index.html">Acasă</a> 
-                    <a href="index.html">pag1</a>
+                    <a href="harta.html">Harta</a> 
                     <a href="documentatie.html">Documentație</a>
                 </div>
 
@@ -28,12 +28,29 @@
     </header>
     <main>
         <div class="container">
+            <div class="vertical-container">
+                <div class="dynamic-container">
+                    <div class="information">
+                        Introduceti datele in formatul [nr noduri/nr muchii]:
+                    </div>  
+                    <textarea class="date" placeholder="[nr. noduri/nr. muchii]" id="inputNrMuchii"></textarea>
+                </div>
+                <div class="dynamic-container">
+                    <div class="information">
+                        Introduceti muchiile in formatul [nod1/nod2/cost]:
+                    </div>
+                    <textarea class="date" placeholder="[x/y/cost]" id="inputMuchii"></textarea>
+                </div>
+                <div class="dynamic-container">
+                    <div class="information">
+                        Introduceti nodurile de start si de interes in formatul [nrinterese/nodstart interese]:
+                    </div>
+                    <textarea class="date" placeholder="[nrinterese/nodstart interese]" id="inputInterese"></textarea>
+                </div>
+            </div>
             <div class="dynamic-container">
-                <textarea class="date" placeholder="nr. muchii" id="inputNrMuchii"></textarea>
-                <textarea class="date" placeholder="x/y/cost" id="inputMuchii"></textarea>
-                <textarea class="date" placeholder="nodstart/nrinterese interese" id="inputInterese"></textarea>
                 <button class="calculate-button" onclick="calculate()">Calculeaza</button>
-		<button class="example-button" onclick="example()">Exemplu</button>
+		        <button class="example-button" onclick="example()">Exemplu</button>
             </div>
             <textarea class="box" placeholder="Date de iesire" readonly id="output"></textarea>
 

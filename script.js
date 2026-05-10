@@ -6,6 +6,15 @@ let output = document.getElementById("output");
 let noduri,muchii,cost,x,y,nodStart,nrInterese,costSolutie=0,costMinim,lungimeSolutie;
 let costuri=[],interese=[],vizitat=[],solutie=[];
 function citire(){
+    output.innerHTML="";
+    costuri=[];
+    interese=[];
+    vizitat=[];
+    solutie=[];
+    costMinim=0;
+    lungimeSolutie=0;
+    costSolutie=0;
+    
     [noduri, muchii] = inputNrMuchii.value.trim().split(/\s+/).map(Number);
     for(let i=0;i<=noduri+3;i++){
         costuri[i] = [];
@@ -26,7 +35,8 @@ function citire(){
 }
 
 function ok(k){
-    if(costuri[vizitat[k-1]][vizitat[k]]==0 && k>1)return 0;
+    if(k>1&&!costuri[vizitat[k-1]][vizitat[k]])
+        return 0;
     for(let i=1;i<k;i++)
         if(vizitat[i]==vizitat[k])
             return 0;
@@ -45,7 +55,8 @@ function verificareSolutie(k) {
     }
     for(let i = 1; i <= 200; i++)
         if(freq[i] == 1) return 0;
-    if(costuri[vizitat[k]][vizitat[1]] == 0) return 0; 
+    if(costuri[vizitat[k]][vizitat[1]] == 0) 
+        return 0; 
         costSolutie+=costuri[vizitat[k]][vizitat[1]];
     if(!costMinim)
         costMinim=costSolutie;
@@ -75,7 +86,23 @@ function Back(k)
 	}
 
 }
+
 function creereGraf(){
+
+    function accentuareMuchie(a, b){
+        const id1 = a+'-'+b;
+        const id2 = b+'-'+a;
+        
+        if(cy.getElementById(id1).length){
+            cy.getElementById(id1).addClass('muchie');
+        } else {
+            cy.getElementById(id2).remove();
+            cy.add({
+                data: { id: id1, source: a, target: b }
+            });
+            cy.getElementById(id1).addClass('muchie');
+        }
+    }
 
     const cy = cytoscape({
       container: document.getElementById('graf'),
@@ -97,18 +124,26 @@ function creereGraf(){
             'font-size': 14
           }
         },
-  	{
-    	  selector: '.rosu',
-          style: {
-      	    'background-color': 'red'
-    	  }
- 	},
+        {
+            selector: '.rosu',
+            style: {
+                'background-color': 'red'
+            }
+        },
         {
           selector: 'edge',
           style: {
             'width': 2,
             'line-color': '#888'
           }
+        },
+        {
+            selector: '.muchie',
+            style: {
+                'width': 2,
+                'target-arrow-shape': 'triangle',
+                'curve-style': 'bezier'  
+            }
         }
       ],
     });
@@ -124,16 +159,19 @@ function creereGraf(){
             }
         }
     }
-
     cy.layout({ name: 'cose', animate: true }).run();
-    cy.getElementById('1').addClass('rosu');
+    for(let i=1;i<lungimeSolutie;i++){
+        accentuareMuchie(solutie[i].toString(), solutie[i+1].toString());
+    }
+    accentuareMuchie(solutie[lungimeSolutie].toString(), nodStart.toString());
 }
+
 function calculate(){
     output.innerHTML="";
     citire();
-    creereGraf();
     vizitat[1] = nodStart;
     Back(2);
+    creereGraf();
     for(let i=1;i<=lungimeSolutie;i++){
         output.innerHTML+=solutie[i]+"->";
     }
@@ -143,8 +181,6 @@ function example(){
     inputNrMuchii.innerHTML="4 6";
     inputMuchii.innerHTML="1 2 10\n1 3 15\n1 4 20\n2 3 35\n2 4 25\n3 4 30";
     inputInterese.innerHTML="3 1 2 3 4";
-    
-
 }
 
 

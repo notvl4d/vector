@@ -176,6 +176,8 @@ function calculate(){
         output.innerHTML+=solutie[i]+"->";
     }
     output.innerHTML+=nodStart;
+    output.innerHTML+="\nCostul drumului este:";
+    output.innerHTML+=costMinim;
 }
 function example(){
     inputNrMuchii.innerHTML="4 6";

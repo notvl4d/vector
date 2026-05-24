@@ -10,13 +10,13 @@ Proiectul combină o interfață web intuitiva (JavaScript + HTML/CSS) cu o impl
 
 ## Caracteristici Principale
 
-- ✅ **Rezolvare optimă TSP** - Algoritmul backtracking găsește drumul optim cu cost minim
-- 🎨 **Vizualizare grafică interactivă** - Utilizează biblioteca Cytoscape.js pentru reprezentarea grafurilor
-- 📊 **Interfață web responsivă** - Design modern cu animații și UX intuitiv
-- 🔢 **Suport pentru grafuri mari** - Capacitate de procesare pentru grafuri cu sute de noduri
-- 💻 **Implementări duale** - Versiune JavaScript și C++ pentru maxima flexibilitate
-- 📱 **Design responsiv** - Funcționează pe desktop și mobile
-- 🎯 **Exemplu preîncărcat** - Buton pentru încărcare rapidă de date demonstrative
+-  **Rezolvare optimă TSP** - Algoritmul backtracking găsește drumul optim cu cost minim
+-  **Vizualizare grafică interactivă** - Utilizează biblioteca Cytoscape.js pentru reprezentarea grafurilor
+-  **Interfață web responsivă** - Design modern cu animații și UX intuitiv
+-  **Suport pentru grafuri mari** - Capacitate de procesare pentru grafuri cu sute de noduri
+-  **Implementări duale** - Versiune JavaScript și C++ pentru maxima flexibilitate
+-  **Design responsiv** - Funcționează pe desktop și mobile
+-  **Exemplu preîncărcat** - Buton pentru încărcare rapidă de date demonstrative
 
 ---
 

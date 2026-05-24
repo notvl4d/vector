@@ -1,4 +1,4 @@
-# VECTOR - Rezolvitor de Probleme de Drum Optim
+# VECTOR
 
 ## Descriere Proiect
 
